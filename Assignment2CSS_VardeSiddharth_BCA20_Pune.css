@@ -1,0 +1,97 @@
+.HeaderDivision
+{
+background-color : Black;
+height : 60;
+width : 100%;
+}
+
+.HomeTable
+{
+font-size : 25;
+float : Left;
+color : #00ccff;
+margin-left : 20;
+}
+
+.PortfolioTable
+{
+Font-size : 25;
+float : right;
+color : #00ccff;
+margin-right : 20;
+}
+
+.HeaderHover
+{
+font-size : 25;
+}
+
+.HeaderHover:hover
+{
+Font-size : 35;
+}
+
+.SlideShowDivision
+{
+height : 250;
+width : 100%;
+}
+
+.LogoImagePopup
+{
+animation-name : LogoImageAnimation;
+animation-duration : 2s;
+}
+
+@keyframes LogoImageAnimation
+{
+from {width : 0%;}
+to {width : 100%;}
+}
+
+.TextOnImage
+{
+width : 100%;
+height : 500;
+margin-left : 200;
+font-size : 25;
+}
+
+.MyworkDivision
+{
+width : 100%;
+height : 1400;
+background-color : #00ccff;
+}
+
+.MyworkDetails
+{
+font-size : 25;
+margin-left : 50;
+}
+.FooterDivision
+{
+Width : 100%;
+height : 100;
+background-color : black;
+}
+
+.AboutDivision
+{
+height : 600;
+width : 100%;
+background-color : #00ccff;
+}
+
+.AboutTable
+{
+margin-left : 50;
+Font-size : 22;
+}
+
+.ContactDivision
+{
+width : 100%;
+height : 400;
+font-size : 25;
+}
