@@ -7,8 +7,44 @@ Assignment2 AboutAndContact
 <Link rel = "StyleSheet" href = "https://vardesiddharth.github.io/Assignment2_HTML/Assignment2CSS_VardeSiddharth_BCA20_Pune.css"
  type = "text/css">
 
+<Script>
+function OnInfoHover()
+{
+	var x = document.getElementById("AboutInfo");
+	x.style.color = "White";
+	x.style.fontSize = 25;
+}
+
+function OnInfoOut()
+{
+	var x = document.getElementById("AboutInfo");
+	x.style.color = "Black";
+	x.style.fontSize = 20;
+}
+
+function OnKeyDownEmail()
+{
+	var x = document.getElementById("EmailForm");
+	x.value = x.value.toLowerCase()
+}
+
+function OnSubmitted()
+{
+	var x = document.getElementById("EmailForm");
+	if(x.value == "")
+	{
+		window.alert("Please Enter your Email");
+	}
+	else
+	{
+		window.alert("Submitted Successfully");	
+	}
+}
+
+</Script>
 
 </Head>
+
 <Body>
 <Div class = "HeaderDivision">
 <Table class = "HomeTable" cellpadding = "3" cellspacing = "5">
@@ -39,7 +75,8 @@ Assignment2 AboutAndContact
 <img src = "https://vardesiddharth.github.io/Assignment2_HTML/MyPhoto.jpg" 
  width = "90%">
 </Td>
-<Td>
+<Td id = "AboutInfo" onmouseover = "OnInfoHover()" 
+onmouseout = "OnInfoOut()">
 <H1>Varde Siddharth</H1>
  I am a Game Developer who loves to develop games even more than
  I love to play them.
@@ -68,17 +105,20 @@ So, I want to inspire others as those games inspired me.
 <Tr>
 <td>
 First Name :<BR>
-<input type = "Text" name = "FirstName" size = "30">
+<input type = "Text" name = "FirstName" size = "30" 
+pattern = "[a-zA-Z]{1,}" title = "Please Enter only Letters">
 </td>
 <Td>
 Last Name :<BR>
-<input type = "Text" name = "LastName" size = "30">
+<input type = "Text" name = "LastName" size = "30"
+pattern = "[a-zA-Z]{1,}" title = "Please Enter only Letters">
 </Td>
 </Tr>
 <Tr>
 <td>
 Email Id :<BR>
-<input type = "Text" name = "EmailId" size = "30">
+<input type = "Text" name = "EmailId" size = "30" id = "EmailForm"
+onkeyup = "OnKeyDownEmail()">
 </td>
 </Tr>
 <Tr>
@@ -90,7 +130,8 @@ Subject : <br>
 </Tr>
 <Tr>
 <Td>
-<input type = "submit" name = "Submit" value = "Submit">
+<input type = "submit" name = "Submit" value = "Submit" 
+onclick = "OnSubmitted()">
 </Td>
 </Tr>
 </Table>

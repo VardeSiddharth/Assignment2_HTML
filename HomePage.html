@@ -6,6 +6,21 @@
 <Link rel = "Stylesheet" href = "https://vardesiddharth.github.io/Assignment2_HTML/Assignment2CSS_VardeSiddharth_BCA20_Pune.css"
  type = "text/css">
 </Link>
+
+<Script>
+	function MyOnMouseHover()
+	{
+		var x = document.getElementById("TitleHeading");
+		x.style.color = "Red";
+	}
+
+	function MyOnMouseOut()
+	{
+		var x = document.getElementById("TitleHeading");
+		x.style.color = "Black";
+	}
+</Script>
+
 </Head>
 
 <Body>
@@ -35,7 +50,9 @@
 </Div>
 
 <Div class = "TextOnImage">
-<H1>21stargames</H1>
+<H1 id = "TitleHeading" onmouseover = "MyOnMouseHover()"
+ onmouseout = "MyOnMouseOut()"
+>21stargames</H1>
 <H3>Varde Siddharth</H3>
 <H5>Game Developer , Unity Developer ,<Br> Game Programmer.</H5>
 </Div>
